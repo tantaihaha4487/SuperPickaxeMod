@@ -29,8 +29,8 @@ jobs:
 
       - name: Create resource pack zip
         run: |
-          cd resourcepacks
-          zip -r ../SuperPickaxe_ResourcePack.zip SuperPickaxe
+          cd resourcepacks/SuperPickaxe
+          zip -r ../SuperPickaxe_ResourcePack.zip *
 
       - name: Upload mod artifact
         uses: actions/upload-artifact@v4

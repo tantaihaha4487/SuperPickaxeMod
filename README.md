@@ -12,9 +12,11 @@ You'll need Fabric installed obviously.
 - **Install the mod**: Ideally, you should install the mod jar on your client so you can see the cool textures and names properly.
 
 ### Server
+Download [Resource Pack](https://modrinth.com/project/WRfA5BM1)
 - **Mod Required**: The server needs the mod installed in the `mods` folder.
 - **Client Optional?**: Technically, players don't *block-game-crash-level* require the mod installed on their side if the server has it. **BUT**, they really should install the server resource pack (texture pack).
 - **Texture Warning**: If you don't have the mod or the texture pack installed, the items are gonna look glitchy (custom items often show as purple and black squares without the assets). So yeah, just install the pack/mod to avoid the ugly.
+
 
 ## Crafting Recipes
 All recipes are **Shapeless**.
