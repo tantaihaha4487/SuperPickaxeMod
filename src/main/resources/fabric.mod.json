@@ -4,7 +4,7 @@
   "version": "${version}",
   "name": "SuperPickaxe",
   "description": "Pickaxe with 3*3 block breaking ability.",
-  "authors": [],
+  "authors": ["Thanachot P."],
   "contact": {},
   "license": "MIT",
   "icon": "assets/superpickaxe/icon.png",
