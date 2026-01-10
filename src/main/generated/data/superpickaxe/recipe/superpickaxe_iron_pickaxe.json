@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "fabric:type": "fabric:components",
+      "base": "minecraft:iron_pickaxe",
+      "components": {
+        "minecraft:damage": 0,
+        "minecraft:enchantments": {}
+      }
+    },
+    "minecraft:nether_star"
+  ],
+  "result": {
+    "components": {
+      "minecraft:custom_data": {
+        "SuperPickaxe": 1
+      },
+      "minecraft:custom_name": {
+        "bold": true,
+        "color": "#FFD700",
+        "text": "Super Iron Pickaxe"
+      },
+      "minecraft:item_model": "superpickaxe:superpickaxe_iron_pickaxe"
+    },
+    "count": 1,
+    "id": "minecraft:iron_pickaxe"
+  }
+}

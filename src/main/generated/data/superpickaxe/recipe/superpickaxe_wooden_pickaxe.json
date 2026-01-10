@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "fabric:type": "fabric:components",
+      "base": "minecraft:wooden_pickaxe",
+      "components": {
+        "minecraft:damage": 0,
+        "minecraft:enchantments": {}
+      }
+    },
+    "minecraft:nether_star"
+  ],
+  "result": {
+    "components": {
+      "minecraft:custom_data": {
+        "SuperPickaxe": 1
+      },
+      "minecraft:custom_name": {
+        "bold": true,
+        "color": "#FFD700",
+        "text": "Super Wooden Pickaxe"
+      },
+      "minecraft:item_model": "superpickaxe:superpickaxe_wooden_pickaxe"
+    },
+    "count": 1,
+    "id": "minecraft:wooden_pickaxe"
+  }
+}

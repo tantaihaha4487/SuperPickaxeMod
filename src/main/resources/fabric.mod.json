@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "superpickaxe",
+  "version": "${version}",
+  "name": "SuperPickaxe",
+  "description": "Pickaxe with 3*3 block breaking ability.",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/superpickaxe/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "net.thanachot.superpickaxe.client.SuperPickaxeDataGenerator"
+    ],
+    "client": [
+      "net.thanachot.superpickaxe.client.SuperPickaxeClient"
+    ],
+    "main": [
+      "net.thanachot.superpickaxe.SuperPickaxe"
+    ]
+  },
+  "mixins": [
+    "superpickaxe.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
