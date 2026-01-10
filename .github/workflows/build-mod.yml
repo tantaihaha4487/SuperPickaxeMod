@@ -42,4 +42,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: resourcepack-artifact
-          path: SuperPickaxe_ResourcePack.zip
+          path: resourcepacks/SuperPickaxe_ResourcePack.zip
