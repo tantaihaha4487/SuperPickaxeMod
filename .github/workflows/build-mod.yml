@@ -1,0 +1,45 @@
+name: Build SuperPickaxe Mod
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+  id-token: write
+  security-events: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build with Gradle
+        run: ./gradlew build
+
+      - name: Create resource pack zip
+        run: |
+          cd resourcepacks
+          zip -r ../SuperPickaxe_ResourcePack.zip SuperPickaxe
+
+      - name: Upload mod artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mod-artifact
+          path: build/libs/*.jar
+
+      - name: Upload resource pack artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resourcepack-artifact
+          path: SuperPickaxe_ResourcePack.zip
