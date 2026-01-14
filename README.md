@@ -1,4 +1,4 @@
-# Super Pickaxe Mod 
+# Super Pickaxe Mod
 Pickaxe with 3*3 block breaking ability, Server friendly.
 
 
@@ -21,10 +21,9 @@ Download [Resource Pack](https://modrinth.com/project/WRfA5BM1)
 
 | Feature | Server Only | Client Only | Both |
 |---------|:-----------:|:-----------:|:----:|
-| 3x3 Mining | ✅ | ❌ | ✅ |
-| Crafting Recipes | ✅ | ❌ | ✅ |
+| 3x3 Mining | ✅ | ✅ | ✅ |
+| Crafting Recipes | ✅ | ✅ | ✅ |
 | Custom Textures | ❌* | ✅ | ✅ |
-| Gold/Bold Item Names | ❌ | ✅ | ✅ |
 | Creative Tab Items | ❌ | ✅ | ✅ |
 
 *\*Server can provide textures via resource pack*
