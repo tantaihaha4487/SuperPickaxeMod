@@ -17,6 +17,18 @@ Download [Resource Pack](https://modrinth.com/project/WRfA5BM1)
 - **Client Optional?**: Technically, players don't *block-game-crash-level* require the mod installed on their side if the server has it. **BUT**, they really should install the server resource pack (texture pack).
 - **Texture Warning**: If you don't have the mod or the texture pack installed, the items are gonna look glitchy (custom items often show as purple and black squares without the assets). So yeah, just install the pack/mod to avoid the ugly.
 
+### Feature Matrix
+
+| Feature | Server Only | Client Only | Both |
+|---------|:-----------:|:-----------:|:----:|
+| 3x3 Mining | ✅ | ❌ | ✅ |
+| Crafting Recipes | ✅ | ❌ | ✅ |
+| Custom Textures | ❌* | ✅ | ✅ |
+| Gold/Bold Item Names | ❌ | ✅ | ✅ |
+| Creative Tab Items | ❌ | ✅ | ✅ |
+
+*\*Server can provide textures via resource pack*
+
 
 ## Crafting Recipes
 All recipes are **Shapeless**.
