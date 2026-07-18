@@ -10,7 +10,7 @@ public class SuperPickaxeDataGenerator implements DataGeneratorEntrypoint {
     @Override
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
-        pack.addProvider(ModModelProvider::new);
-        pack.addProvider(ModRecipeProvider::new);
+        pack.addProvider((FabricDataGenerator.Pack.Factory<ModModelProvider>) ModModelProvider::new);
+        pack.addProvider((FabricDataGenerator.Pack.RegistryDependentFactory<ModRecipeProvider>) ModRecipeProvider::new);
     }
 }

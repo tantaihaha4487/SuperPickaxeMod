@@ -1,18 +1,20 @@
 package net.thanachot.superpickaxe.datagen;
 
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.data.models.model.TextureSlot;
 import net.minecraft.client.data.models.model.TextureMapping;
+import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.thanachot.superpickaxe.SuperPickaxe;
 
 public class ModModelProvider extends FabricModelProvider {
-    public ModModelProvider(FabricDataOutput output) {
+    public ModModelProvider(FabricPackOutput output) {
         super(output);
     }
 
@@ -32,7 +34,7 @@ public class ModModelProvider extends FabricModelProvider {
 
             ModelTemplates.FLAT_HANDHELD_ITEM.create(
                     modelId,
-                    TextureMapping.layer0(textureId),
+                    TextureMapping.singleSlot(TextureSlot.LAYER0, new Material(textureId)),
                     itemModelGenerator.modelOutput);
         }
     }

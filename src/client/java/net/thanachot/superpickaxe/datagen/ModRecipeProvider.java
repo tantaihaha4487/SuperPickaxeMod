@@ -1,6 +1,6 @@
 package net.thanachot.superpickaxe.datagen;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.fabricmc.fabric.api.recipe.v1.ingredient.DefaultCustomIngredients;
 import net.minecraft.core.HolderLookup;
@@ -14,11 +14,12 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.enchantment.ItemEnchantments;
 import net.thanachot.superpickaxe.SuperPickaxe;
 import net.thanachot.superpickaxe.util.SuperPickaxeRegistry;
+
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
 
-    public ModRecipeProvider(FabricDataOutput output,
+    public ModRecipeProvider(FabricPackOutput output,
             CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
@@ -36,7 +37,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                                     .set(DataComponents.DAMAGE, 0)
                                     .set(DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY));
 
-                    shapeless(RecipeCategory.TOOLS, SuperPickaxeRegistry.createSuperPickaxeStack(pickaxe))
+                    shapeless(RecipeCategory.TOOLS, SuperPickaxeRegistry.createSuperPickaxeTemplate(pickaxe))
                             .requires(strictPickaxeInput)
                             .requires(Items.NETHER_STAR)
                             .unlockedBy(getHasName(pickaxe), has(pickaxe))

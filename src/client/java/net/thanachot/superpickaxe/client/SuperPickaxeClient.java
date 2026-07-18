@@ -1,7 +1,7 @@
 package net.thanachot.superpickaxe.client;
 
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.thanachot.superpickaxe.SuperPickaxe;
@@ -15,9 +15,9 @@ public class SuperPickaxeClient implements ClientModInitializer {
     }
 
     private void registerCreativeTabItems() {
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(content -> {
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(content -> {
             for (Item pickaxe : SuperPickaxe.PICKAXES) {
-                content.addAfter(pickaxe, SuperPickaxeRegistry.createSuperPickaxeStack(pickaxe));
+                content.insertAfter(pickaxe, SuperPickaxeRegistry.createSuperPickaxeStack(pickaxe));
             }
         });
     }

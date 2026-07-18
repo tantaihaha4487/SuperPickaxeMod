@@ -39,8 +39,11 @@ public class SuperPickaxeUsage implements PlayerBlockBreakEvents.Before {
                 }
 
                 HARVESTED_BLOCKS.add(targetPos);
-                serverPLayer.gameMode.destroyBlock(targetPos);
-                HARVESTED_BLOCKS.remove(targetPos);
+                try {
+                    serverPLayer.gameMode.destroyBlock(targetPos);
+                } finally {
+                    HARVESTED_BLOCKS.remove(targetPos);
+                }
             }
         }
 
