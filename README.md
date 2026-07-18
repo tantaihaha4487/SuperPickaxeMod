@@ -7,9 +7,9 @@ Pickaxe with 3*3 block breaking ability, server-authoritative and multiplayer fr
 - **Server Compatible**: Does not require the mod on the client side.
 ## Requirements
 
-SuperPickaxe targets Minecraft **26.1.2** and Java **25+**.
+SuperPickaxe targets Minecraft **26.2** and Java **25+**.
 
-Fabric Loader **0.19.3+** and Fabric API **0.155.2+26.1.2** remain runtime dependencies.
+Fabric Loader **0.19.3+** and Fabric API **0.155.2+26.2** remain runtime dependencies.
 
 ### Client
 
