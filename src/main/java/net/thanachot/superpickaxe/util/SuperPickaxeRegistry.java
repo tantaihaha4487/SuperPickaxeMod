@@ -1,15 +1,15 @@
 package net.thanachot.superpickaxe.util;
 
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.NbtComponent;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.registry.Registries;
-import net.minecraft.text.Style;
-import net.minecraft.text.Text;
-import net.minecraft.text.TextColor;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.Style;
+import net.minecraft.network.chat.TextColor;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.CustomData;
 import net.thanachot.superpickaxe.SuperPickaxe;
 
 /**
@@ -25,7 +25,7 @@ public class SuperPickaxeRegistry {
      * @return The item ID string (e.g., "superpickaxe_diamond_pickaxe")
      */
     public static String getItemId(Item pickaxe) {
-        return "superpickaxe_" + Registries.ITEM.getId(pickaxe).getPath();
+        return "superpickaxe_" + BuiltInRegistries.ITEM.getKey(pickaxe).getPath();
     }
 
     /**
@@ -36,7 +36,7 @@ public class SuperPickaxeRegistry {
      *         superpickaxe:superpickaxe_diamond_pickaxe)
      */
     public static Identifier getModel(Item pickaxe) {
-        return Identifier.of(SuperPickaxe.MOD_ID, getItemId(pickaxe));
+        return Identifier.fromNamespaceAndPath(SuperPickaxe.MOD_ID, getItemId(pickaxe));
     }
 
     /**
@@ -49,14 +49,14 @@ public class SuperPickaxeRegistry {
      * @return A configured Super Pickaxe ItemStack
      */
     public static ItemStack createSuperPickaxeStack(Item pickaxe) {
-        ItemStack stack = pickaxe.getDefaultStack();
-        NbtCompound nbt = new NbtCompound();
+        ItemStack stack = pickaxe.getDefaultInstance();
+        CompoundTag nbt = new CompoundTag();
         nbt.putBoolean(SuperPickaxe.SUPER_PICKAXE_KEY, true);
-        stack.set(DataComponentTypes.CUSTOM_DATA, NbtComponent.of(nbt));
+        stack.set(DataComponents.CUSTOM_DATA, CustomData.of(nbt));
 
-        stack.set(DataComponentTypes.ITEM_MODEL, getModel(pickaxe));
-        stack.set(DataComponentTypes.CUSTOM_NAME,
-                Text.literal("Super " + pickaxe.getName().getString()).setStyle(
+        stack.set(DataComponents.ITEM_MODEL, getModel(pickaxe));
+        stack.set(DataComponents.CUSTOM_NAME,
+                Component.literal("Super " + pickaxe.getName().getString()).setStyle(
                         Style.EMPTY
                                 .withColor(TextColor.fromRgb(0xFFD700))
                                 .withBold(true)));

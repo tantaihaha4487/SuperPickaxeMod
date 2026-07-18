@@ -2,13 +2,13 @@ package net.thanachot.superpickaxe.datagen;
 
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.minecraft.client.data.BlockStateModelGenerator;
-import net.minecraft.client.data.ItemModelGenerator;
-import net.minecraft.client.data.Models;
-import net.minecraft.client.data.TextureMap;
-import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
-import net.minecraft.util.Identifier;
+import net.minecraft.client.data.models.BlockModelGenerators;
+import net.minecraft.client.data.models.ItemModelGenerators;
+import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.data.models.model.TextureMapping;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.Item;
 import net.thanachot.superpickaxe.SuperPickaxe;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -17,23 +17,23 @@ public class ModModelProvider extends FabricModelProvider {
     }
 
     @Override
-    public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+    public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
     }
 
     @Override
-    public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+    public void generateItemModels(ItemModelGenerators itemModelGenerator) {
         for (Item pickaxe : SuperPickaxe.PICKAXES) {
-            String pickaxePath = Registries.ITEM.getId(pickaxe).getPath();
+            String pickaxePath = BuiltInRegistries.ITEM.getKey(pickaxe).getPath();
             String materialName = pickaxePath.replace("_pickaxe", "");
 
             String superPickaxeName = "super_" + materialName + "_pickaxe";
-            Identifier modelId = Identifier.of(SuperPickaxe.MOD_ID, "item/" + superPickaxeName);
-            Identifier textureId = Identifier.of(SuperPickaxe.MOD_ID, "item/" + superPickaxeName);
+            Identifier modelId = Identifier.fromNamespaceAndPath(SuperPickaxe.MOD_ID, "item/" + superPickaxeName);
+            Identifier textureId = Identifier.fromNamespaceAndPath(SuperPickaxe.MOD_ID, "item/" + superPickaxeName);
 
-            Models.HANDHELD.upload(
+            ModelTemplates.FLAT_HANDHELD_ITEM.create(
                     modelId,
-                    TextureMap.layer0(textureId),
-                    itemModelGenerator.modelCollector);
+                    TextureMapping.layer0(textureId),
+                    itemModelGenerator.modelOutput);
         }
     }
 }

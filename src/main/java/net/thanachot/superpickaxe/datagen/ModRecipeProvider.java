@@ -3,45 +3,44 @@ package net.thanachot.superpickaxe.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.fabricmc.fabric.api.recipe.v1.ingredient.DefaultCustomIngredients;
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.ItemEnchantmentsComponent;
-import net.minecraft.data.recipe.RecipeExporter;
-import net.minecraft.data.recipe.RecipeGenerator;
-import net.minecraft.item.Item;
-import net.minecraft.recipe.Ingredient;
-import net.minecraft.recipe.book.RecipeCategory;
-import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.enchantment.ItemEnchantments;
 import net.thanachot.superpickaxe.SuperPickaxe;
 import net.thanachot.superpickaxe.util.SuperPickaxeRegistry;
-import net.minecraft.item.Items;
-
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
 
     public ModRecipeProvider(FabricDataOutput output,
-            CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+            CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 
     @Override
-    protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup wrapperLookup,
-            RecipeExporter recipeExporter) {
-        return new RecipeGenerator(wrapperLookup, recipeExporter) {
+    protected RecipeProvider createRecipeProvider(HolderLookup.Provider wrapperLookup,
+            RecipeOutput recipeExporter) {
+        return new RecipeProvider(wrapperLookup, recipeExporter) {
             @Override
-            public void generate() {
+            public void buildRecipes() {
                 for (Item pickaxe : SuperPickaxe.PICKAXES) {
                     Ingredient strictPickaxeInput = DefaultCustomIngredients.components(
-                            Ingredient.ofItems(pickaxe),
+                            Ingredient.of(pickaxe),
                             builder -> builder
-                                    .add(DataComponentTypes.DAMAGE, 0)
-                                    .add(DataComponentTypes.ENCHANTMENTS, ItemEnchantmentsComponent.DEFAULT));
+                                    .set(DataComponents.DAMAGE, 0)
+                                    .set(DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY));
 
-                    createShapeless(RecipeCategory.TOOLS, SuperPickaxeRegistry.createSuperPickaxeStack(pickaxe))
-                            .input(strictPickaxeInput)
-                            .input(Items.NETHER_STAR)
-                            .criterion(hasItem(pickaxe), conditionsFromItem(pickaxe))
-                            .offerTo(exporter, SuperPickaxeRegistry.getItemId(pickaxe));
+                    shapeless(RecipeCategory.TOOLS, SuperPickaxeRegistry.createSuperPickaxeStack(pickaxe))
+                            .requires(strictPickaxeInput)
+                            .requires(Items.NETHER_STAR)
+                            .unlockedBy(getHasName(pickaxe), has(pickaxe))
+                            .save(output, SuperPickaxeRegistry.getItemId(pickaxe));
                 }
             }
         };

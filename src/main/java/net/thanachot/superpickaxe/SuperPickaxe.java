@@ -1,8 +1,8 @@
 package net.thanachot.superpickaxe;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.thanachot.superpickaxe.event.SuperPickaxeUsage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

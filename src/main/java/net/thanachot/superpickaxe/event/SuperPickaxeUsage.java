@@ -1,13 +1,13 @@
 package net.thanachot.superpickaxe.event;
 
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
 import net.thanachot.superpickaxe.util.SuperPickaxeHelper;
 import org.jetbrains.annotations.Nullable;
 
@@ -23,23 +23,23 @@ public class SuperPickaxeUsage implements PlayerBlockBreakEvents.Before {
     }
 
     @Override
-    public boolean beforeBlockBreak(World world, PlayerEntity playerEntity, BlockPos blockPos, BlockState blockState, @Nullable BlockEntity blockEntity) {
+    public boolean beforeBlockBreak(Level world, Player playerEntity, BlockPos blockPos, BlockState blockState, @Nullable BlockEntity blockEntity) {
 
-        if (world.isClient()) return true; // Process on Server
+        if (world.isClientSide()) return true; // Process on Server
 
-        ItemStack heldItem = playerEntity.getMainHandStack();
+        ItemStack heldItem = playerEntity.getMainHandItem();
 
-        if (SuperPickaxeHelper.isSuperPickaxe(heldItem) && playerEntity instanceof ServerPlayerEntity serverPLayer) {
+        if (SuperPickaxeHelper.isSuperPickaxe(heldItem) && playerEntity instanceof ServerPlayer serverPLayer) {
             if (HARVESTED_BLOCKS.contains(blockPos)) return true; // Prevent recursive breaking
 
             // Get blocks to destroy (range 1 = 3x3)
             for (BlockPos targetPos : SuperPickaxeHelper.getBlockToBeDestroy(1, blockPos, serverPLayer)) {
-                if (blockPos.equals(targetPos) || !heldItem.isSuitableFor(world.getBlockState(targetPos))) {
+                if (blockPos.equals(targetPos) || !heldItem.isCorrectToolForDrops(world.getBlockState(targetPos))) {
                     continue;
                 }
 
                 HARVESTED_BLOCKS.add(targetPos);
-                serverPLayer.interactionManager.tryBreakBlock(targetPos);
+                serverPLayer.gameMode.destroyBlock(targetPos);
                 HARVESTED_BLOCKS.remove(targetPos);
             }
         }

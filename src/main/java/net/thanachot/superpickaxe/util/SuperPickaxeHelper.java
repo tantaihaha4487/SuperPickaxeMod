@@ -1,13 +1,13 @@
 package net.thanachot.superpickaxe.util;
 
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.NbtComponent;
-import net.minecraft.item.ItemStack;
-import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.hit.HitResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.CustomData;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.HitResult;
 import net.thanachot.superpickaxe.SuperPickaxe;
 
 import java.util.ArrayList;
@@ -18,10 +18,10 @@ public class SuperPickaxeHelper {
     public static boolean isSuperPickaxe(ItemStack stack) {
         if (stack.isEmpty()) return false;
 
-        NbtComponent customData = stack.get(DataComponentTypes.CUSTOM_DATA);
+        CustomData customData = stack.get(DataComponents.CUSTOM_DATA);
         if (customData == null) return false;
 
-        return customData.copyNbt().getBoolean(SuperPickaxe.SUPER_PICKAXE_KEY).orElse(false);
+        return customData.copyTag().getBoolean(SuperPickaxe.SUPER_PICKAXE_KEY).orElse(false);
     }
 
     /**
@@ -35,14 +35,14 @@ public class SuperPickaxeHelper {
      * @return List of BlockPos to destroy
      */
 
-    public static List<BlockPos> getBlockToBeDestroy(int range, BlockPos initBlockPos, ServerPlayerEntity player) {
+    public static List<BlockPos> getBlockToBeDestroy(int range, BlockPos initBlockPos, ServerPlayer player) {
         List<BlockPos> positions = new ArrayList<>();
-        HitResult hit = player.raycast(20, 0, false);
+        HitResult hit = player.pick(20, 0, false);
 
         if (hit.getType() == HitResult.Type.BLOCK) {
             BlockHitResult hitResult = (BlockHitResult) hit;
 
-            if (hitResult.getSide() == Direction.DOWN || hitResult.getSide() == Direction.UP) {
+            if (hitResult.getDirection() == Direction.DOWN || hitResult.getDirection() == Direction.UP) {
                 for (int x = -range; x <= range; x++) {
                     for (int z = -range; z <= range; z++) {
                         positions.add(new BlockPos(
@@ -54,7 +54,7 @@ public class SuperPickaxeHelper {
                 }
             }
 
-            if (hitResult.getSide() == Direction.NORTH || hitResult.getSide() == Direction.SOUTH) {
+            if (hitResult.getDirection() == Direction.NORTH || hitResult.getDirection() == Direction.SOUTH) {
                 for (int x = -range; x <= range; x++) {
                     for (int y = -range; y <= range; y++) {
                         positions.add(new BlockPos(
@@ -66,7 +66,7 @@ public class SuperPickaxeHelper {
                 }
             }
 
-            if (hitResult.getSide() == Direction.EAST || hitResult.getSide() == Direction.WEST) {
+            if (hitResult.getDirection() == Direction.EAST || hitResult.getDirection() == Direction.WEST) {
                 for (int y = -range; y <= range; y++) {
                     for (int z = -range; z <= range; z++) {
                         positions.add(new BlockPos(
