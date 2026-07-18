@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "fabric:type": "fabric:components",
+      "base": "minecraft:copper_pickaxe",
+      "components": {
+        "minecraft:damage": 0,
+        "minecraft:enchantments": {}
+      }
+    },
+    "minecraft:nether_star"
+  ],
+  "result": {
+    "components": {
+      "minecraft:custom_data": {
+        "SuperPickaxe": 1
+      },
+      "minecraft:custom_name": {
+        "bold": true,
+        "color": "#FFD700",
+        "text": "Super Copper Pickaxe"
+      },
+      "minecraft:item_model": "superpickaxe:superpickaxe_copper_pickaxe"
+    },
+    "id": "minecraft:copper_pickaxe"
+  }
+}

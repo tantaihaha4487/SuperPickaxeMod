@@ -20,6 +20,7 @@ public class SuperPickaxe implements ModInitializer {
     public static final List<Item> PICKAXES = List.of(
             Items.WOODEN_PICKAXE,
             Items.STONE_PICKAXE,
+            Items.COPPER_PICKAXE,
             Items.GOLDEN_PICKAXE,
             Items.IRON_PICKAXE,
             Items.DIAMOND_PICKAXE,
