@@ -36,15 +36,26 @@ Download [Resource Pack](https://modrinth.com/project/WRfA5BM1)
 
 
 ## Crafting Recipes
-All recipes are **Shapeless**.
-You just need to combine a **fresh, undamaged Pickaxe** with a **Nether Star**.
+All recipes are **Shaped**. Place three matching **fresh, undamaged pickaxes** across
+the top row, then place two **sticks** in the center column below them.
+
+```text
+PPP
+ S
+ S
+```
+
+`P` is the pickaxe tier you want to upgrade and `S` is a stick.
 
 ### All Pickaxe Variants
 
 #### Wooden Super Pickaxe
-| Ingredient | Ingredient | Result |
+| Layout | Ingredients |
 |:---:|:---:|:---:|
-| ![Wooden Pickaxe](https://mc.nerothe.com/img/26.1.2/minecraft_wooden_pickaxe.png) | ![Nether Star](https://mc.nerothe.com/img/26.1.2/minecraft_nether_star.png) | ![Super Wooden Pickaxe](https://github.com/tantaihaha4487/SuperPickaxeMod/blob/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_wooden_pickaxe.png?raw=true) **Super Wooden Pickaxe** |
+| Top row | Three wooden pickaxes |
+| Middle row | Stick in the center |
+| Bottom row | Stick in the center |
+| Result | ![Super Wooden Pickaxe](https://github.com/tantaihaha4487/SuperPickaxeMod/blob/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_wooden_pickaxe.png?raw=true) **Super Wooden Pickaxe** |
 
 #### Stone Super Pickaxe
 | Ingredient | Ingredient | Result |

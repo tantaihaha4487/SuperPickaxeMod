@@ -1,0 +1,70 @@
+name: Manual Upload to Modrinth
+
+on:
+  workflow_dispatch:
+    inputs:
+      changelog:
+        description: Changelog for this Modrinth version
+        required: false
+        type: string
+      release_type:
+        description: Modrinth release channel
+        required: true
+        default: release
+        type: choice
+        options:
+          - release
+          - beta
+          - alpha
+
+permissions:
+  contents: read
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+
+      - name: Build mod
+        run: |
+          chmod +x gradlew
+          ./gradlew build --no-daemon
+
+      - name: Find mod JAR
+        id: find_jar
+        shell: bash
+        run: |
+          JAR_PATH="$(find build/libs -maxdepth 1 -type f -name '*.jar' \
+            ! -name '*-sources.jar' ! -name '*-javadoc.jar' | sort | head -n 1)"
+          test -n "$JAR_PATH"
+          echo "path=$JAR_PATH" >> "$GITHUB_OUTPUT"
+
+      - name: Read mod version
+        id: mod_version
+        shell: bash
+        run: |
+          VERSION="$(awk -F= '$1 == "mod_version" { print $2 }' gradle.properties)"
+          test -n "$VERSION"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Upload to Modrinth
+        uses: cloudnode-pro/modrinth-publish@v2
+        with:
+          token: ${{ secrets.MODRINTH_TOKEN }}
+          project: ${{ vars.MODRINTH_PROJECT_ID }}
+          name: SuperPickaxe ${{ steps.mod_version.outputs.version }}
+          version: ${{ steps.mod_version.outputs.version }}
+          changelog: ${{ inputs.changelog }}
+          loaders: fabric
+          game-versions: 26.2
+          release-type: ${{ inputs.release_type }}
+          files: ${{ steps.find_jar.outputs.path }}
