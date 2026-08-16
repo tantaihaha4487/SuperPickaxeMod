@@ -74,5 +74,5 @@ jobs:
           changelog: ${{ inputs.changelog }}
           loaders: fabric
           game-versions: ${{ inputs.game_version }}
-          release-type: ${{ inputs.release_type }}
+          channel: ${{ inputs.release_type }}
           files: ${{ steps.find_jar.outputs.path }}
