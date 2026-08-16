@@ -1,105 +1,74 @@
 # Super Pickaxe Mod
-Pickaxe with 3*3 block breaking ability, server-authoritative and multiplayer friendly.
 
+Craft a Super Pickaxe that breaks a 3×3 plane of blocks at once. The mining logic runs on the server, so players do not need SuperPickaxe installed on their clients.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/src/main/resources/assets/superpickaxe/icon.png" alt="Super Pickaxe icon" width="128">
+</p>
 
 ## Features
-- **3x3 Mining**: Breaks a 3x3 area (9 blocks) at once.
-- **Server Compatible**: Does not require the mod on the client side.
+
+- Break a 3×3 plane oriented to the face you mine.
+- Run the mod on a dedicated server while keeping the client mod optional.
+- Craft wooden, stone, copper, golden, iron, diamond, and netherite variants.
+- Add the variants to the Tools & Utilities creative tab when the client mod is installed.
+
 ## Requirements
 
-The **1.0.5** release supports Minecraft **26.1.2** and **26.2** on Java **25+**.
-Install the build matching your Minecraft version.
+All 1.0.5 releases require Java 25 or newer and Fabric Loader 0.19.3 or newer.
 
-Fabric Loader **0.19.3+** remains a runtime dependency. Use the matching Fabric API:
+| Minecraft | Mod file | Fabric API |
+| --- | --- | --- |
+| 26.1.2 | `SuperPickaxe-26.1.2-1.0.5.jar` | `0.155.2+26.1.2` |
+| 26.2 | `SuperPickaxe-26.2-1.0.5.jar` | `0.155.2+26.2` |
 
-- Minecraft 26.1.2: Fabric API **0.155.2+26.1.2**
-- Minecraft 26.2: Fabric API **0.155.2+26.2**
+Install the build and Fabric API version that match your Minecraft version.
 
-### Client
+## Installation
 
-- Install Fabric Loader, Fabric API, and Java 25+.
-- Installing SuperPickaxe on a client is optional when joining a server that provides the mod, but it enables the local creative-tab entries and bundled custom assets.
-- The resource pack is optional for gameplay, but required for the custom item models and textures when those assets are not supplied by the client mod.
+1. Download the matching mod JAR from the [GitHub releases](https://github.com/tantaihaha4487/SuperPickaxeMod/releases).
+2. Install Fabric Loader, Fabric API, and Java 25+ on the server.
+3. Put the SuperPickaxe JAR and Fabric API JAR in the server's `mods` folder.
+4. Start the server.
 
-### Server
-Download [Resource Pack](https://modrinth.com/project/WRfA5BM1)
-- **Mod Required**: The server needs the mod installed in the `mods` folder.
-- **Client Optional**: SuperPickaxe is not required on multiplayer clients when the server provides it. Fabric Loader and Fabric API are still required for the Fabric runtime.
-- **Resource Pack**: Optional for crafting and mining, but required for the custom item visuals when the client does not have the mod assets.
+SuperPickaxe is optional on clients joining a server that has the mod. Installing it on the client adds the items to the creative tab and provides the custom item assets locally.
 
-### Feature Matrix
+For singleplayer, install the matching JAR and Fabric API in the instance's `mods` folder.
 
-| Feature | Server Only | Client Only | Both |
-|---------|:-----------:|:-----------:|:----:|
-| 3x3 Mining | ✅ | ✅ | ✅ |
-| Crafting Recipes | ✅ | ✅ | ✅ |
-| Custom Textures | ❌* | ✅ | ✅ |
-| Creative Tab Items | ❌ | ✅ | ✅ |
+For clients without the mod, install the [SuperPickaxe resource pack](https://modrinth.com/project/WRfA5BM1) to display the custom item models and textures. The resource pack is not required for crafting or 3×3 mining.
 
-*\*Server can provide textures via resource pack*
+## Use
 
+1. Craft a Super Pickaxe using the recipe below.
+2. Hold it in your main hand.
+3. Mine a block. The pickaxe breaks the surrounding 3×3 plane, and only blocks the pickaxe can harvest are included.
 
-## Crafting Recipes
-All recipes are **Shaped**. Place three matching **fresh, undamaged pickaxes** across
-the top row, then place two **sticks** in the center column below them.
+## Crafting
+
+Use three matching, undamaged, unenchanted pickaxes and two sticks:
 
 ```text
 PPP
- S
- S
+_S_
+_S_
 ```
 
-`P` is the pickaxe tier you want to upgrade and `S` is a stick.
+- `P` is the pickaxe tier you want to upgrade.
+- `S` is a stick.
+- `_` is an empty slot.
 
-### All Pickaxe Variants
+The recipe is available for these tiers:
 
-#### Wooden Super Pickaxe
-| ![Wooden Pickaxe](https://minecraft.wiki/images/thumb/Wooden_Pickaxe_JE1_BE1.png/32px-Wooden_Pickaxe_JE1_BE1.png) | ![Wooden Pickaxe](https://minecraft.wiki/images/thumb/Wooden_Pickaxe_JE1_BE1.png/32px-Wooden_Pickaxe_JE1_BE1.png) | ![Wooden Pickaxe](https://minecraft.wiki/images/thumb/Wooden_Pickaxe_JE1_BE1.png/32px-Wooden_Pickaxe_JE1_BE1.png) |
-|:---:|:---:|:---:|
-|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
-|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
-| **Result** | ![Super Wooden Pickaxe](https://wsrv.nl/?url=raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_wooden_pickaxe.png&w=32&h=32&fit=contain) **Super Wooden Pickaxe** |  |
+| Input pickaxe | Result |
+| --- | --- |
+| Wooden | <img src="https://raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_wooden_pickaxe.png" alt="Super Wooden Pickaxe texture" width="32"> Super Wooden Pickaxe |
+| Stone | <img src="https://raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_stone_pickaxe.png" alt="Super Stone Pickaxe texture" width="32"> Super Stone Pickaxe |
+| Copper | <img src="https://raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_copper_pickaxe.png" alt="Super Copper Pickaxe texture" width="32"> Super Copper Pickaxe |
+| Golden | <img src="https://raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_golden_pickaxe.png" alt="Super Golden Pickaxe texture" width="32"> Super Golden Pickaxe |
+| Iron | <img src="https://raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_iron_pickaxe.png" alt="Super Iron Pickaxe texture" width="32"> Super Iron Pickaxe |
+| Diamond | <img src="https://raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_diamond_pickaxe.png" alt="Super Diamond Pickaxe texture" width="32"> Super Diamond Pickaxe |
+| Netherite | <img src="https://raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_netherite_pickaxe.png" alt="Super Netherite Pickaxe texture" width="32"> Super Netherite Pickaxe |
 
-#### Stone Super Pickaxe
-| ![Stone Pickaxe](https://minecraft.wiki/images/thumb/Stone_Pickaxe_JE1_BE1.png/32px-Stone_Pickaxe_JE1_BE1.png) | ![Stone Pickaxe](https://minecraft.wiki/images/thumb/Stone_Pickaxe_JE1_BE1.png/32px-Stone_Pickaxe_JE1_BE1.png) | ![Stone Pickaxe](https://minecraft.wiki/images/thumb/Stone_Pickaxe_JE1_BE1.png/32px-Stone_Pickaxe_JE1_BE1.png) |
-|:---:|:---:|:---:|
-|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
-|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
-| **Result** | ![Super Stone Pickaxe](https://wsrv.nl/?url=raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_stone_pickaxe.png&w=32&h=32&fit=contain) **Super Stone Pickaxe** |  |
+## License
 
-#### Copper Super Pickaxe
-| ![Copper Pickaxe](https://minecraft.wiki/images/thumb/Copper_Pickaxe_JE1_BE1.png/32px-Copper_Pickaxe_JE1_BE1.png) | ![Copper Pickaxe](https://minecraft.wiki/images/thumb/Copper_Pickaxe_JE1_BE1.png/32px-Copper_Pickaxe_JE1_BE1.png) | ![Copper Pickaxe](https://minecraft.wiki/images/thumb/Copper_Pickaxe_JE1_BE1.png/32px-Copper_Pickaxe_JE1_BE1.png) |
-|:---:|:---:|:---:|
-|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
-|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
-| **Result** | ![Super Copper Pickaxe](https://wsrv.nl/?url=raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_copper_pickaxe.png&w=32&h=32&fit=contain) **Super Copper Pickaxe** |  |
-
-#### Iron Super Pickaxe
-| ![Iron Pickaxe](https://minecraft.wiki/images/thumb/Iron_Pickaxe_JE2_BE1.png/32px-Iron_Pickaxe_JE2_BE1.png) | ![Iron Pickaxe](https://minecraft.wiki/images/thumb/Iron_Pickaxe_JE2_BE1.png/32px-Iron_Pickaxe_JE2_BE1.png) | ![Iron Pickaxe](https://minecraft.wiki/images/thumb/Iron_Pickaxe_JE2_BE1.png/32px-Iron_Pickaxe_JE2_BE1.png) |
-|:---:|:---:|:---:|
-|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
-|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
-| **Result** | ![Super Iron Pickaxe](https://wsrv.nl/?url=raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_iron_pickaxe.png&w=32&h=32&fit=contain) **Super Iron Pickaxe** |  |
-
-#### Golden Super Pickaxe
-| ![Golden Pickaxe](https://minecraft.wiki/images/thumb/Golden_Pickaxe_JE2_BE1.png/32px-Golden_Pickaxe_JE2_BE1.png) | ![Golden Pickaxe](https://minecraft.wiki/images/thumb/Golden_Pickaxe_JE2_BE1.png/32px-Golden_Pickaxe_JE2_BE1.png) | ![Golden Pickaxe](https://minecraft.wiki/images/thumb/Golden_Pickaxe_JE2_BE1.png/32px-Golden_Pickaxe_JE2_BE1.png) |
-|:---:|:---:|:---:|
-|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
-|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
-| **Result** | ![Super Golden Pickaxe](https://wsrv.nl/?url=raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_golden_pickaxe.png&w=32&h=32&fit=contain) **Super Golden Pickaxe** |  |
-
-#### Diamond Super Pickaxe
-| ![Diamond Pickaxe](https://minecraft.wiki/images/thumb/Diamond_Pickaxe_JE1_BE1.png/32px-Diamond_Pickaxe_JE1_BE1.png) | ![Diamond Pickaxe](https://minecraft.wiki/images/thumb/Diamond_Pickaxe_JE1_BE1.png/32px-Diamond_Pickaxe_JE1_BE1.png) | ![Diamond Pickaxe](https://minecraft.wiki/images/thumb/Diamond_Pickaxe_JE1_BE1.png/32px-Diamond_Pickaxe_JE1_BE1.png) |
-|:---:|:---:|:---:|
-|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
-|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
-| **Result** | ![Super Diamond Pickaxe](https://wsrv.nl/?url=raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_diamond_pickaxe.png&w=32&h=32&fit=contain) **Super Diamond Pickaxe** |  |
-
-#### Netherite Super Pickaxe
-| ![Netherite Pickaxe](https://minecraft.wiki/images/thumb/Netherite_Pickaxe_JE2_BE1.png/32px-Netherite_Pickaxe_JE2_BE1.png) | ![Netherite Pickaxe](https://minecraft.wiki/images/thumb/Netherite_Pickaxe_JE2_BE1.png/32px-Netherite_Pickaxe_JE2_BE1.png) | ![Netherite Pickaxe](https://minecraft.wiki/images/thumb/Netherite_Pickaxe_JE2_BE1.png/32px-Netherite_Pickaxe_JE2_BE1.png) |
-|:---:|:---:|:---:|
-|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
-|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
-| **Result** | ![Super Netherite Pickaxe](https://wsrv.nl/?url=raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_netherite_pickaxe.png&w=32&h=32&fit=contain) **Super Netherite Pickaxe** |  |
-
----
+SuperPickaxe is licensed under the [MIT License](LICENSE.txt).
