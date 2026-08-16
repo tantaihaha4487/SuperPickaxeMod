@@ -16,6 +16,14 @@ on:
           - release
           - beta
           - alpha
+      game_version:
+        description: Minecraft version supported by this build
+        required: true
+        default: 26.2
+        type: choice
+        options:
+          - 26.1.2
+          - 26.2
 
 permissions:
   contents: read
@@ -60,11 +68,11 @@ jobs:
         uses: cloudnode-pro/modrinth-publish@v2
         with:
           token: ${{ secrets.MODRINTH_TOKEN }}
-          project: ${{ vars.MODRINTH_PROJECT_ID }}
+          project: ${{ secrets.MODRINTH_PROJECT_ID }}
           name: SuperPickaxe ${{ steps.mod_version.outputs.version }}
           version: ${{ steps.mod_version.outputs.version }}
           changelog: ${{ inputs.changelog }}
           loaders: fabric
-          game-versions: 26.2
+          game-versions: ${{ inputs.game_version }}
           release-type: ${{ inputs.release_type }}
           files: ${{ steps.find_jar.outputs.path }}
