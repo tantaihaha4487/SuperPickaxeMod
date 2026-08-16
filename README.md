@@ -54,52 +54,52 @@ PPP
 ### All Pickaxe Variants
 
 #### Wooden Super Pickaxe
-| ![Wooden Pickaxe](https://mc.nerothe.com/img/26.1.2/minecraft_wooden_pickaxe.png) | ![Wooden Pickaxe](https://mc.nerothe.com/img/26.1.2/minecraft_wooden_pickaxe.png) | ![Wooden Pickaxe](https://mc.nerothe.com/img/26.1.2/minecraft_wooden_pickaxe.png) |
+| ![Wooden Pickaxe](https://minecraft.wiki/images/thumb/Wooden_Pickaxe_JE1_BE1.png/32px-Wooden_Pickaxe_JE1_BE1.png) | ![Wooden Pickaxe](https://minecraft.wiki/images/thumb/Wooden_Pickaxe_JE1_BE1.png/32px-Wooden_Pickaxe_JE1_BE1.png) | ![Wooden Pickaxe](https://minecraft.wiki/images/thumb/Wooden_Pickaxe_JE1_BE1.png/32px-Wooden_Pickaxe_JE1_BE1.png) |
 |:---:|:---:|:---:|
-|  | ![Stick](https://mc.nerothe.com/img/26.1.2/minecraft_stick.png) |  |
-|  | ![Stick](https://mc.nerothe.com/img/26.1.2/minecraft_stick.png) |  |
-| **Result** | ![Super Wooden Pickaxe](https://raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_wooden_pickaxe.png) **Super Wooden Pickaxe** |  |
+|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
+|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
+| **Result** | ![Super Wooden Pickaxe](https://wsrv.nl/?url=raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_wooden_pickaxe.png&w=32&h=32&fit=contain) **Super Wooden Pickaxe** |  |
 
 #### Stone Super Pickaxe
-| ![Stone Pickaxe](https://mc.nerothe.com/img/26.1.2/minecraft_stone_pickaxe.png) | ![Stone Pickaxe](https://mc.nerothe.com/img/26.1.2/minecraft_stone_pickaxe.png) | ![Stone Pickaxe](https://mc.nerothe.com/img/26.1.2/minecraft_stone_pickaxe.png) |
+| ![Stone Pickaxe](https://minecraft.wiki/images/thumb/Stone_Pickaxe_JE1_BE1.png/32px-Stone_Pickaxe_JE1_BE1.png) | ![Stone Pickaxe](https://minecraft.wiki/images/thumb/Stone_Pickaxe_JE1_BE1.png/32px-Stone_Pickaxe_JE1_BE1.png) | ![Stone Pickaxe](https://minecraft.wiki/images/thumb/Stone_Pickaxe_JE1_BE1.png/32px-Stone_Pickaxe_JE1_BE1.png) |
 |:---:|:---:|:---:|
-|  | ![Stick](https://mc.nerothe.com/img/26.1.2/minecraft_stick.png) |  |
-|  | ![Stick](https://mc.nerothe.com/img/26.1.2/minecraft_stick.png) |  |
-| **Result** | ![Super Stone Pickaxe](https://raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_stone_pickaxe.png) **Super Stone Pickaxe** |  |
+|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
+|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
+| **Result** | ![Super Stone Pickaxe](https://wsrv.nl/?url=raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_stone_pickaxe.png&w=32&h=32&fit=contain) **Super Stone Pickaxe** |  |
 
 #### Copper Super Pickaxe
-| ![Copper Pickaxe](https://minecraft.wiki/images/Copper_Pickaxe_JE1_BE1.png) | ![Copper Pickaxe](https://minecraft.wiki/images/Copper_Pickaxe_JE1_BE1.png) | ![Copper Pickaxe](https://minecraft.wiki/images/Copper_Pickaxe_JE1_BE1.png) |
+| ![Copper Pickaxe](https://minecraft.wiki/images/thumb/Copper_Pickaxe_JE1_BE1.png/32px-Copper_Pickaxe_JE1_BE1.png) | ![Copper Pickaxe](https://minecraft.wiki/images/thumb/Copper_Pickaxe_JE1_BE1.png/32px-Copper_Pickaxe_JE1_BE1.png) | ![Copper Pickaxe](https://minecraft.wiki/images/thumb/Copper_Pickaxe_JE1_BE1.png/32px-Copper_Pickaxe_JE1_BE1.png) |
 |:---:|:---:|:---:|
-|  | ![Stick](https://mc.nerothe.com/img/26.1.2/minecraft_stick.png) |  |
-|  | ![Stick](https://mc.nerothe.com/img/26.1.2/minecraft_stick.png) |  |
-| **Result** | ![Super Copper Pickaxe](https://raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_copper_pickaxe.png) **Super Copper Pickaxe** |  |
+|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
+|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
+| **Result** | ![Super Copper Pickaxe](https://wsrv.nl/?url=raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_copper_pickaxe.png&w=32&h=32&fit=contain) **Super Copper Pickaxe** |  |
 
 #### Iron Super Pickaxe
-| ![Iron Pickaxe](https://mc.nerothe.com/img/26.1.2/minecraft_iron_pickaxe.png) | ![Iron Pickaxe](https://mc.nerothe.com/img/26.1.2/minecraft_iron_pickaxe.png) | ![Iron Pickaxe](https://mc.nerothe.com/img/26.1.2/minecraft_iron_pickaxe.png) |
+| ![Iron Pickaxe](https://minecraft.wiki/images/thumb/Iron_Pickaxe_JE2_BE1.png/32px-Iron_Pickaxe_JE2_BE1.png) | ![Iron Pickaxe](https://minecraft.wiki/images/thumb/Iron_Pickaxe_JE2_BE1.png/32px-Iron_Pickaxe_JE2_BE1.png) | ![Iron Pickaxe](https://minecraft.wiki/images/thumb/Iron_Pickaxe_JE2_BE1.png/32px-Iron_Pickaxe_JE2_BE1.png) |
 |:---:|:---:|:---:|
-|  | ![Stick](https://mc.nerothe.com/img/26.1.2/minecraft_stick.png) |  |
-|  | ![Stick](https://mc.nerothe.com/img/26.1.2/minecraft_stick.png) |  |
-| **Result** | ![Super Iron Pickaxe](https://raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_iron_pickaxe.png) **Super Iron Pickaxe** |  |
+|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
+|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
+| **Result** | ![Super Iron Pickaxe](https://wsrv.nl/?url=raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_iron_pickaxe.png&w=32&h=32&fit=contain) **Super Iron Pickaxe** |  |
 
 #### Golden Super Pickaxe
-| ![Golden Pickaxe](https://mc.nerothe.com/img/26.1.2/minecraft_golden_pickaxe.png) | ![Golden Pickaxe](https://mc.nerothe.com/img/26.1.2/minecraft_golden_pickaxe.png) | ![Golden Pickaxe](https://mc.nerothe.com/img/26.1.2/minecraft_golden_pickaxe.png) |
+| ![Golden Pickaxe](https://minecraft.wiki/images/thumb/Golden_Pickaxe_JE2_BE1.png/32px-Golden_Pickaxe_JE2_BE1.png) | ![Golden Pickaxe](https://minecraft.wiki/images/thumb/Golden_Pickaxe_JE2_BE1.png/32px-Golden_Pickaxe_JE2_BE1.png) | ![Golden Pickaxe](https://minecraft.wiki/images/thumb/Golden_Pickaxe_JE2_BE1.png/32px-Golden_Pickaxe_JE2_BE1.png) |
 |:---:|:---:|:---:|
-|  | ![Stick](https://mc.nerothe.com/img/26.1.2/minecraft_stick.png) |  |
-|  | ![Stick](https://mc.nerothe.com/img/26.1.2/minecraft_stick.png) |  |
-| **Result** | ![Super Golden Pickaxe](https://raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_golden_pickaxe.png) **Super Golden Pickaxe** |  |
+|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
+|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
+| **Result** | ![Super Golden Pickaxe](https://wsrv.nl/?url=raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_golden_pickaxe.png&w=32&h=32&fit=contain) **Super Golden Pickaxe** |  |
 
 #### Diamond Super Pickaxe
-| ![Diamond Pickaxe](https://mc.nerothe.com/img/26.1.2/minecraft_diamond_pickaxe.png) | ![Diamond Pickaxe](https://mc.nerothe.com/img/26.1.2/minecraft_diamond_pickaxe.png) | ![Diamond Pickaxe](https://mc.nerothe.com/img/26.1.2/minecraft_diamond_pickaxe.png) |
+| ![Diamond Pickaxe](https://minecraft.wiki/images/thumb/Diamond_Pickaxe_JE1_BE1.png/32px-Diamond_Pickaxe_JE1_BE1.png) | ![Diamond Pickaxe](https://minecraft.wiki/images/thumb/Diamond_Pickaxe_JE1_BE1.png/32px-Diamond_Pickaxe_JE1_BE1.png) | ![Diamond Pickaxe](https://minecraft.wiki/images/thumb/Diamond_Pickaxe_JE1_BE1.png/32px-Diamond_Pickaxe_JE1_BE1.png) |
 |:---:|:---:|:---:|
-|  | ![Stick](https://mc.nerothe.com/img/26.1.2/minecraft_stick.png) |  |
-|  | ![Stick](https://mc.nerothe.com/img/26.1.2/minecraft_stick.png) |  |
-| **Result** | ![Super Diamond Pickaxe](https://raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_diamond_pickaxe.png) **Super Diamond Pickaxe** |  |
+|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
+|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
+| **Result** | ![Super Diamond Pickaxe](https://wsrv.nl/?url=raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_diamond_pickaxe.png&w=32&h=32&fit=contain) **Super Diamond Pickaxe** |  |
 
 #### Netherite Super Pickaxe
-| ![Netherite Pickaxe](https://mc.nerothe.com/img/26.1.2/minecraft_netherite_pickaxe.png) | ![Netherite Pickaxe](https://mc.nerothe.com/img/26.1.2/minecraft_netherite_pickaxe.png) | ![Netherite Pickaxe](https://mc.nerothe.com/img/26.1.2/minecraft_netherite_pickaxe.png) |
+| ![Netherite Pickaxe](https://minecraft.wiki/images/thumb/Netherite_Pickaxe_JE2_BE1.png/32px-Netherite_Pickaxe_JE2_BE1.png) | ![Netherite Pickaxe](https://minecraft.wiki/images/thumb/Netherite_Pickaxe_JE2_BE1.png/32px-Netherite_Pickaxe_JE2_BE1.png) | ![Netherite Pickaxe](https://minecraft.wiki/images/thumb/Netherite_Pickaxe_JE2_BE1.png/32px-Netherite_Pickaxe_JE2_BE1.png) |
 |:---:|:---:|:---:|
-|  | ![Stick](https://mc.nerothe.com/img/26.1.2/minecraft_stick.png) |  |
-|  | ![Stick](https://mc.nerothe.com/img/26.1.2/minecraft_stick.png) |  |
-| **Result** | ![Super Netherite Pickaxe](https://raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_netherite_pickaxe.png) **Super Netherite Pickaxe** |  |
+|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
+|  | ![Stick](https://minecraft.wiki/images/thumb/Stick_JE1_BE1.png/32px-Stick_JE1_BE1.png) |  |
+| **Result** | ![Super Netherite Pickaxe](https://wsrv.nl/?url=raw.githubusercontent.com/tantaihaha4487/SuperPickaxeMod/master/resourcepacks/SuperPickaxe/assets/superpickaxe/textures/item/super_netherite_pickaxe.png&w=32&h=32&fit=contain) **Super Netherite Pickaxe** |  |
 
 ---
