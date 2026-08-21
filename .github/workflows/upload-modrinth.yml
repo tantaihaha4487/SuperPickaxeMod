@@ -75,4 +75,5 @@ jobs:
           loaders: fabric
           game-versions: ${{ inputs.game_version }}
           channel: ${{ inputs.release_type }}
+          environment: server_only_client_optional
           files: ${{ steps.find_jar.outputs.path }}
